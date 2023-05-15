@@ -12,9 +12,21 @@ $(function () {
 
 
   var now = dayjs().format('MM/DD/YYYY');
+  var hour = dayjs().hour();
   $("#currentDay").text(now);
+  
+  //sets the background colors based on if its past, present, or future depending on the current time
+  for (i = 9; i < 20; i++) {
+    if (i < hour) {
+      $("#hour-" + i).attr("class", "past row time-block");
+    } else if (hour === i) {
+      $("#hour-" + i).attr("class", "present row time-block");
+    } else {
+      $("#hour-" + i).attr("class", "future row time-block");
+    }
+  }
 
-
+  //grabs the values from local storage and sets them to text area
   for (i = 9; i < 20; i++) {
     var div = $("#hour-" + i);
     div.children("textarea").val(localStorage.getItem("hour-" + i));
