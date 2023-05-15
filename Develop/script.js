@@ -3,16 +3,24 @@
 // in the html.
 $(function () {
   var saveButtonEl = $(".saveBtn");
-  var description = $(".description")
-  var item = "17";
   saveButtonEl.on("click", function () {
-    localStorage.setItem("data", item);
+    var key = $(this).parent().attr("id");
+    var description = $(this).siblings("textarea").val();
+    localStorage.setItem(key, description);
+    key.children("textarea").val(localStorage.getItem(key));
   })
 
 
   var now = dayjs().format('MM/DD/YYYY');
   $("#currentDay").text(now);
+
+
+  for (i = 9; i < 20; i++) {
+    var div = $("#hour-" + i);
+    div.children("textarea").val(localStorage.getItem("hour-" + i));
+  }
 });
+
 
 
 
