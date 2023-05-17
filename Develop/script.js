@@ -14,6 +14,7 @@ $(function () {
   var now = dayjs().format('MM/DD/YYYY');
   var hour = dayjs().hour();
   $("#currentDay").text(now);
+  // $("#currentTime").text(hour);
   
   //sets the background colors based on if its past, present, or future depending on the current time
   for (i = 9; i < 20; i++) {
