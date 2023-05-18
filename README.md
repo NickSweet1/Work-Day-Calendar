@@ -8,9 +8,7 @@ Input your tasks that need to be completed for each time slot. Using dayjs, the 
 
 link to deployed application: https://nicksweet1.github.io/Work-Day-Calendar/
 
-![Screenshot (17)](https://github.com/NickSweet1/Work-Day-Calendar/assets/111986248/b39efbcd-11f8-44f6-833d-d3828a898355)
 
-![Screenshot (18)](https://github.com/NickSweet1/Work-Day-Calendar/assets/111986248/f6a69444-7bc8-4f91-88a2-0f5ccb04c016)
 
 ## Contributing
 Assistance and support provided by classmate Joshua Vaneps @ https://github.com/JoshuaVaneps
