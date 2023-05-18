@@ -10,10 +10,12 @@ $(function () {
     key.children("textarea").val(localStorage.getItem(key));
   })
 
-
+  var day = dayjs().day();
+  var weekday = ['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  console.log(day);
   var now = dayjs().format('MM/DD/YYYY');
   var hour = dayjs().hour();
-  $("#currentDay").text(now);
+  $("#currentDay").text(weekday[day] + ", " + now);
   // $("#currentTime").text(hour);
   
   //sets the background colors based on if its past, present, or future depending on the current time
